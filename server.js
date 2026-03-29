@@ -56,6 +56,7 @@ io.on('connection', (socket) => {
     console.log(`User ${socket.id} joined ${room}`);
   });
 
+  // implenttin the soceket 
   socket.on('send-message', (message) => {
     const room = message.sessionId ? `session-${message.sessionId}` : 'general';
     io.to(room).emit('receive-message', message);
