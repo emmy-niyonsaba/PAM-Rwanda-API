@@ -1,7 +1,7 @@
 import { DataTypes } from 'sequelize';
 import sequelize from '../config/database.js';
 import User from './User.js';
-
+// this the section of defining the Event modle and defining it with squelize
 const Event = sequelize.define('Event', {
   id: {
     type: DataTypes.UUID,
