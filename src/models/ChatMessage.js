@@ -2,6 +2,7 @@ import { DataTypes } from 'sequelize';
 import sequelize from '../config/database.js';
 import User from './User.js';
 
+//defining the message modle and configuring int with squlizer
 const ChatMessage = sequelize.define('ChatMessage', {
   id: {
     type: DataTypes.UUID,
