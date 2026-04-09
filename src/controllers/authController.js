@@ -28,14 +28,14 @@ export const register = async (req, res) => {
 
     res.status(201).json({
       message: 'User registered successfully',
-      user: {
-        id: user.id,
-        firstName: user.firstName,
-        lastName: user.lastName,
-        email: user.email,
-        country: user.country,
-        role: user.role,
-      },
+      // user: {
+      //   id: user.id,
+      //   firstName: user.firstName,
+      //   lastName: user.lastName,
+      //   email: user.email,
+      //   country: user.country,
+      //   role: user.role,
+      // },
       token,
     });
   } catch (error) {
