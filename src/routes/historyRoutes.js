@@ -1,9 +1,5 @@
 import express from 'express';
-import {
-  getHistories,
-  getHistoryById,
-  createHistory,
-} from '../controllers/historyController.js';
+import {getHistories,getHistoryById,createHistory} from '../controllers/historyController.js';
 import { authenticate, authorize } from '../middleware/auth.js';
 
 const router = express.Router();

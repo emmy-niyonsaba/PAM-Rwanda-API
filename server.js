@@ -26,11 +26,9 @@ app.use(express.json());
 app.use('/api/auth', authRoutes);
 app.use('/api/events', eventRoutes);
 app.use('/api/testimonies', testimonyRoutes);
-app.use('/api/sessions', sessionRoutes);
 app.use('/api/history', historyRoutes);
 app.use('/api/panafricanists', panafricanistRoutes);
 app.use('/api/opportunities', opportunityRoutes);
-app.use('/api/chat', chatRoutes);
 
 // Health check
 app.get('/api/health', (req, res) => {
