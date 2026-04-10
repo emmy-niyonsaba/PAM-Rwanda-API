@@ -7,11 +7,8 @@ import sequelize from './src/config/database.js';
 import authRoutes from './src/routes/authRoutes.js';
 import eventRoutes from './src/routes/eventRoutes.js';
 import testimonyRoutes from './src/routes/testimonyRoutes.js';
-import sessionRoutes from './src/routes/sessionRoutes.js';
 import historyRoutes from './src/routes/historyRoutes.js';
 import panafricanistRoutes from './src/routes/panafricanistRoutes.js';
-import opportunityRoutes from './src/routes/opportunityRoutes.js';
-import chatRoutes from './src/routes/chatRoutes.js';
 
 dotenv.config();
 
@@ -23,12 +20,12 @@ app.use(cors({ origin: process.env.CORS_ORIGIN || 'http://localhost:5173' }));
 app.use(express.json());
 
 // Routes
+
 app.use('/api/auth', authRoutes);
 app.use('/api/events', eventRoutes);
 app.use('/api/testimonies', testimonyRoutes);
 app.use('/api/history', historyRoutes);
 app.use('/api/panafricanists', panafricanistRoutes);
-app.use('/api/opportunities', opportunityRoutes);
 
 // Health check
 app.get('/api/health', (req, res) => {
