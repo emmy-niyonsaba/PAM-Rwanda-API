@@ -1,5 +1,6 @@
 import express from 'express';
 import { register, login, getUserProfile, updateUserProfile, deleteUserAccount} from '../controllers/authController.js';
+// import { authenticate } from '../middleware/auth.js';just for testing the auth middleware, will be removed later 
 import { authenticate } from '../middleware/auth.js';
 
 const router = express.Router();
