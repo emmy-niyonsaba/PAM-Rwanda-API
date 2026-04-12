@@ -9,6 +9,9 @@ import eventRoutes from './src/routes/eventRoutes.js';
 import testimonyRoutes from './src/routes/testimonyRoutes.js';
 import historyRoutes from './src/routes/historyRoutes.js';
 import panafricanistRoutes from './src/routes/panafricanistRoutes.js';
+import opportunityRoutes from './src/routes/opportunityRoutes.js';
+import sessionRoutes from './src/routes/sessionRoutes.js';
+import chatRoutes from './src/routes/chatRoutes.js';
 
 dotenv.config();
 
@@ -26,6 +29,9 @@ app.use('/api/events', eventRoutes);
 app.use('/api/testimonies', testimonyRoutes);
 app.use('/api/history', historyRoutes);
 app.use('/api/panafricanists', panafricanistRoutes);
+app.use('/api/opportunities', opportunityRoutes);
+app.use('/api/sessions', sessionRoutes);
+app.use('/api/chat', chatRoutes);
 
 // Health check
 app.get('/api/health', (req, res) => {

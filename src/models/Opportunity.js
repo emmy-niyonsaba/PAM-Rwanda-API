@@ -1,5 +1,6 @@
 import { DataTypes } from 'sequelize';
 import sequelize from '../config/database.js';
+import User from './User.js';
 
 const Opportunity = sequelize.define('Opportunity', {
   id: {
@@ -35,9 +36,17 @@ const Opportunity = sequelize.define('Opportunity', {
     type: DataTypes.DATE,
     allowNull: true,
   },
+  salary: {
+    type: DataTypes.STRING,
+    allowNull: true,
+  },
   image: {
     type: DataTypes.STRING,
     allowNull: true,
+  },
+  createdBy: {
+    type: DataTypes.UUID,
+    references: { model: 'Users', key: 'id' },
   },
   createdAt: {
     type: DataTypes.DATE,
@@ -48,5 +57,7 @@ const Opportunity = sequelize.define('Opportunity', {
     defaultValue: DataTypes.NOW,
   },
 });
+
+Opportunity.belongsTo(User, { foreignKey: 'createdBy', as: 'creator' });
 
 export default Opportunity;
